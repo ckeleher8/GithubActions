@@ -56,5 +56,5 @@ public class PowerTests
 	public void Power_Valid_Keleher() => Assert.AreEqual(100, Program.Power("10", "2"));
 
 	[TestMethod]
-	public void Power_Invalid_Keleher() => Assert.AreEqual(9, Program.Power("2", "3"));
+	public void Power_Invalid_Keleher() => Assert.AreEqual(8, Program.Power("2", "3"));
 }
