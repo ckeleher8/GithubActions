@@ -33,6 +33,12 @@ public class SubtractionTests
 {
 	[TestMethod]
 	public void Subtract_Valid_Keleher() =>  Assert.AreEqual(5, Program.Subtract("10", "5"));
+
+	[TestMethod]
+	public void Subtract_Invalid_Keleher() => Assert.ThrowsException<FormatException>(() => Program.Subtract("10", "a"));
+
+	[TestMethod]
+	public void Subtract_Null_Keleher() => Assert.ThrowsException<ArgumentNullException>(() => Program.Subtract("10", null));
 }
 
 [TestClass]
@@ -40,6 +46,12 @@ public class MultiplicationTests
 {
 	[TestMethod]
 	public void Multiply_Valid_Keleher() => Assert.AreEqual(50, Program.Multiply("10", "5"));
+
+	[TestMethod]
+	public void Multiply_Invalid_Keleher() => Assert.ThrowsException<FormatException>(() => Program.Multiply("10", "a"));
+
+	[TestMethod]
+	public void Multiply_Null_Keleher() => Assert.ThrowsException<ArgumentNullException>(() => Program.Multiply("10", null));
 }
 
 [TestClass]
@@ -47,6 +59,13 @@ public class DivisionTests
 {
 	[TestMethod]
 	public void Divide_Valid_Keleher() => Assert.AreEqual(2, Program.Divide("10", "5"));
+
+	[TestMethod]
+	public void Divide_Invalid_Keleher() => Assert.ThrowsException<FormatException>(() => Program.Divide("10", "a"));
+
+	[TestMethod]
+	public void Divide_Null_Keleher() => Assert.ThrowsException<ArgumentNullException>(() => Program.Divide("10", null));
+
 }
 
 [TestClass]
@@ -56,5 +75,8 @@ public class PowerTests
 	public void Power_Valid_Keleher() => Assert.AreEqual(100, Program.Power("10", "2"));
 
 	[TestMethod]
-	public void Power_Invalid_Keleher() => Assert.AreEqual(8, Program.Power("2", "3"));
+	public void Power_Invalid_Keleher() => Assert.ThrowsException<FormatException>(() => Program.Power("10", "a"));
+
+	[TestMethod]
+	public void Power_Null_Keleher() => Assert.ThrowsException<ArgumentNullException>(() => Program.Power("2", null));
 }
